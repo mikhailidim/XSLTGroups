@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns="http://mmikhail.com/sample/xml/Orchard"
+            targetNamespace="http://mmikhail.com/sample/xml/Orchard"
+            elementFormDefault="qualified">
+  <xsd:complexType name="OrchardType">
+    <xsd:sequence>
+      <xsd:element name="Apples" type="xsd:int" minOccurs="0"/>
+      <xsd:element name="Pears" type="xsd:int" minOccurs="0"/>
+      <xsd:element name="Plums" type="xsd:int" minOccurs="0"/>
+      <xsd:element name="Oranges" type="xsd:int" minOccurs="0"/>
+      <xsd:element name="Bananas" type="xsd:int" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GroceryListType" xmlns="http://mmikhail.com/sample/xml/GroceryList">
+    <xsd:sequence>
+      <xsd:element name="Item" maxOccurs="unbounded" minOccurs="0">
+        <xsd:complexType>
+          <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+              <xsd:attribute name="Name" type="xsd:string"/>
+              <xsd:attribute name="Type" type="xsd:string"/>
+            </xsd:extension>
+          </xsd:simpleContent>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="Orchad" type="OrchardType">
+    <xsd:annotation>
+      <xsd:documentation>
+        A sample element
+      </xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="GroceryList" type="GroceryListType"/>
+</xsd:schema>

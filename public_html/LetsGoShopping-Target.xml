@@ -1,0 +1,6 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<ns0:GroceryList xmlns:ns0="http://mmikhail.com/sample/xml/Orchard" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://mmikhail.com/sample/xml/Orchard file:/C:/JDeveloper/mywork/Application1/XSLTGroups/ApplesOranges.xsd">
+   <ns0:Item Name="Apples">3</ns0:Item>
+   <ns0:Item Name="Pears">15</ns0:Item>
+   <ns0:Item Name="Bananas">1</ns0:Item>
+</ns0:GroceryList>
