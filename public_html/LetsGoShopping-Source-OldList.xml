@@ -2,4 +2,5 @@
 <GroceryList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://mmikhail.com/sample/xml/Orchard file:/C:/JDeveloper/mywork/Application1/XSLTGroups/ApplesOranges.xsd" xmlns="http://mmikhail.com/sample/xml/Orchard">
    <Item Name="Apples">10</Item>
    <Item Name="Plums">5</Item>
+   <Item Name="Oranges">2</Item>
 </GroceryList>

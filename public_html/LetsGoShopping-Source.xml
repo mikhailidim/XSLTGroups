@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Orchad xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://mmikhail.com/sample/xml/Orchard file:/C:/JDeveloper/mywork/Application1/XSLTGroups/ApplesOranges.xsd" xmlns="http://mmikhail.com/sample/xml/Orchard">
    <Apples>3</Apples>
-   <Pears>15</Pears>
+   <Pears>2</Pears>
    <Bananas>1</Bananas>
+   <Oranges>3</Oranges>
 </Orchad>
