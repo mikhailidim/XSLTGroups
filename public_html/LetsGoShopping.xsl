@@ -45,22 +45,21 @@
   <xsl:param name="OldList"/>
   <xsl:variable name="orchd">
     <xsl:for-each select="/ns0:Orchad/*">
-       <ns0:Item Name="{local-name()}">
+       <ns0:Item Name="{name()}">
             <xsl:value-of select="."/>
        </ns0:Item>        
     </xsl:for-each>
   </xsl:variable>
-  <xsl:variable name="jointProps">
+  <xsl:variable name="groups">
     <xsl:for-each-group select="$OldList/ns0:GroceryList/ns0:Item,$orchd/ns0:Item" group-by="@Name">  
-    <!--xsl:for-each-group select="$OldList/ns0:GroceryList/ns0:Item,$orchd/ns0:Item" group-by="@Name"-->      
        <ns0:Item Name="{current-grouping-key()}">
-        <xsl:value-of select="current-group()[last()]"/>
+        <xsl:value-of select="sum(current-group())"/>
        </ns0:Item> 
     </xsl:for-each-group>
   </xsl:variable>
   <xsl:template match="/">
     <ns0:GroceryList>
-      <xsl:copy-of select="$jointProps"/>
+      <xsl:copy-of select="$groups"/>
    </ns0:GroceryList>   
   </xsl:template>
 </xsl:stylesheet>
